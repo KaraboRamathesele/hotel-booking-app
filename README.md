@@ -2,6 +2,9 @@
 
 Elaine's Grand Hotel Booking Application
 
+how to use:
+run from om server index.php - home
+
 Built with PHP, HTML, AND JAVASCRIPT
 
 OPEN USING LOCALHOST
