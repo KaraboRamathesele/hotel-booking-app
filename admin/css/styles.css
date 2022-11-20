@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+   --orange: #fb5607;
+   --brown: #7f5539;
+   --darkgrey: #212529;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.h-font {
+    font-family: 'Merienda', cursive;
+}
+
+.available {
+    margin-top: -50px;
+    z-index: 2;
+    position: relative;
+    /** Moves it up */
+}
+
+@media screen and (max-width: 578px) {
+    .available {
+        margin-top: 0px;
+    }
+
+}
+
+.h-line {
+    width: 150px;
+    margin: 0 auto;
+    height: 1.7px;
+}
+
+.hotel--name {
+    color: var(--brown);
+}
