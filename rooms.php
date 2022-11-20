@@ -43,15 +43,15 @@
                                 <h5 class="mb-3 fs-6">FACILITIES</h5>
                                 <div class="mb-2">
                                     <input type="checkbox" id="f1" class="form-control form-check-input me-1 shadow-none mb-3">
-                                    <label class="form-check-label" for="f1" style="">Facility 1</label>
+                                    <label class="form-check-label" for="f1" style="">Heating</label>
                                 </div>
                                 <div class="mb-2">
                                     <input type="checkbox" id="f2" class="form-control form-check-input me-1 shadow-none mb-3">
-                                    <label class="form-check-label" for="f2" style="">Facility 1</label>
+                                    <label class="form-check-label" for="f2" style="">Spa</label>
                                 </div>
                                 <div class="mb-2">
                                     <input type="checkbox" id="f3" class="form-control form-check-input me-1 shadow-none mb-3">
-                                    <label class="form-check-label" for="f3" style="">Facility 1</label>
+                                    <label class="form-check-label" for="f3" style="">Extra sheets</label>
                                 </div>
                             </div>
                             <div class="border bg-light p-3 rounded mb-6">
@@ -71,6 +71,35 @@
             </div>
 
             <div class="col-lg-9 col-md-12 px-4">
+
+                <?php
+                $room_res = select("SELECT * FROM `rooms` WHERE `status` =? AND `removed` =? ", [1, 0], 'ii');
+
+                while ($room_data = mysqli_fetch_assoc($room_res)) {
+                    //get room facilities
+                    $fac_q = mysqli_query($con, "SELECT f.name FROM `facilities` f
+                     INNER JOIN `room_facilities` rfac  ON f.id = rfac.facilities_id
+                     WHERE rfac.room_id = '$room_data[id]'");
+
+                    $facilities_data = "";
+                    while ($fac_row = mysqli_fetch_assoc($fac_q)) {
+                        $facilities_data = "<span class=`badge rounded-pill bg-light text-wrap`>
+                      $fac_row[name]
+                    </span>";
+                    }
+                }
+
+                //image?
+
+                // print out the room 
+
+                echo <<<data
+                
+                
+                data;
+
+                ?>
+                <!-- Sample/ Static-->
                 <div class="card-body">
                     <h5>Standard Room</h5>
                     <p class="mb-4">ZAR1800 per night</p>
