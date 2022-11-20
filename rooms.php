@@ -72,6 +72,29 @@
 
             <div class="col-lg-9 col-md-12 px-4">
 
+                <!-- Sample/ Static-->
+                <div class="card-body">
+                    <h5>Standard Room</h5>
+                    <p class="mb-4">ZAR1800 per night</p>
+                    <div class="features mb-4">
+                        <h6 class="mb-1">Features</h6>
+                        <span class="badge rounded-pill text-dark bg-light text-wrap">
+                            1 Large double bed
+                        </span>
+                        <span class="badge rounded-pill text-dark bg-light text-wrap">
+                            1 Bathroom
+                        </span>
+                        <span class="badge rounded-pill text-dark bg-light text-wrap">
+                            Balcony
+                        </span>
+                        <span class="badge rounded-pill text-dark bg-light text-wrap">
+                            Beautifully decorated
+                        </span>
+                    </div>
+                </div>
+
+
+
                 <?php
                 $room_res = select("SELECT * FROM `rooms` WHERE `status` =? AND `removed` =? ", [1, 0], 'ii');
 
@@ -93,32 +116,13 @@
 
                 // print out the room 
 
-                echo <<<data
-                
-                
-                data;
+                // echo <<<data
+
+
+                // data;
 
                 ?>
-                <!-- Sample/ Static-->
-                <div class="card-body">
-                    <h5>Standard Room</h5>
-                    <p class="mb-4">ZAR1800 per night</p>
-                    <div class="features mb-4">
-                        <h6 class="mb-1">Features</h6>
-                        <span class="badge rounded-pill text-dark bg-light text-wrap">
-                            1 Large double bed
-                        </span>
-                        <span class="badge rounded-pill text-dark bg-light text-wrap">
-                            1 Bathroom
-                        </span>
-                        <span class="badge rounded-pill text-dark bg-light text-wrap">
-                            Balcony
-                        </span>
-                        <span class="badge rounded-pill text-dark bg-light text-wrap">
-                            Beautifully decorated
-                        </span>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

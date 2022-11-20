@@ -62,7 +62,7 @@
 
                                 <option value="1">1</option>
                                 <option value="2">2</option>
-                                <option value="3">3 +</option>
+                                <option value="3">3+</option>
                             </select>
                         </div>
                         <div class="col-lg-2">
@@ -71,13 +71,13 @@
                             <label class="form-label mt-3 fw-bold">Children</label>
                             <select class="form-select shadow-none">
 
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3 +</option>
+                                <option value="1">0</option>
+                                <option value="2">1</option>
+                                <option value="3">2 +</option>
                             </select>
                         </div>
                         <div class="col-lg-1 mb-lg-2 mt-3 ">
-                            <button type="submit" class="btn btn-success shadow-none">Search</button>
+                            <button type="submit" class="btn btn-success shadow-none">'Search</button>
                         </div>
                 </form>
             </div>
