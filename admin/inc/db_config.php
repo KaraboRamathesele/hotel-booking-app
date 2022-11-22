@@ -2,16 +2,16 @@
 
 $hname = 'localhost';
 $uname = 'root';
-$pass = '';
+$pass = 'root';
 $db = 'hotelbookingapp';
 
 // Creates connection
-$con = mysqli_connect($hname, $uname, $pass, $db);
+$conn = new mysqli($hname, $uname, $pass, $db);
 
 
 //Checks Connection
-if (!$con) {
-    die("Cannot connect to the database" . mysqli_connect_error());
+if (!$conn->connect_error) {
+    die("Cannot connect to the database" . $conn->connect_error);
 }
 echo "Connected successfully";
 
