@@ -37,3 +37,5 @@ if (isset($_POST['add_room'])) {
     //     die('query cannot be prepared, ');
     // }
 }
+
+require('inc/scripts.php');
